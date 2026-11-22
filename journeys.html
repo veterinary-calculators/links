@@ -1,0 +1,206 @@
+﻿<html>
+<head>
+<title>JOURNEYS Quality of Life - calculator</title>
+
+<style>
+
+body {
+background-color: #FFFFFF;
+font-family: Helvetica;
+font-size:14px;
+}
+
+#wrapper
+{
+display:table;
+padding:5px;
+}
+
+#entry {
+display:table-row;
+}
+
+#info {
+display:table-cell;
+width:120px
+}
+
+#box {
+display:table-cell;
+width:100px
+}
+
+#question {
+display:table-cell;
+width: 250px;
+}
+
+#answer {
+display:table-cell;
+width: 80px;
+}
+
+#heading {
+font-size:18px;
+font-weight:bold;
+display:table-cell;
+width: 700px;
+}
+
+#description
+{
+padding-left:50px;
+display:block;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+
+#results {
+padding:20px;
+}
+
+#index {
+display:table-cell;
+width: 250px;
+font-weight:bold;
+}
+
+#assessment {
+display:table-cell;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>JOURNEYS Quality of Life - calculator</h1>
+
+<div id="wrapper">
+<div id="entry"><div id="info">Date: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Patient Name: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Patient ID: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Client Name: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+
+</div>
+
+
+
+
+<form id="form2">
+
+<div id="wrapper">
+
+
+<div id="entry"><div id="heading">J. Jumping or Mobility</div></div>
+<div id="entry">
+	<div id="description"><label for="j_poor"><input type="radio" name="j" value="1" id="j_poor"  /> Your pet cannot walk or stand without assistance</label></div>
+	<div id="description"><label for="j_mod"><input type="radio" name="j" value="5" id="j_mod" /> Your pet can move around as long as he/she has their pain medication. They can do about half the activities they did when they were healthier, or can get about half the distance on a walk, or spend half the time doing their activities (chasing a Frisbee, swimming, hunting) as they used to.</label></div>
+	<div id="description"><label for="j_good"><input type="radio" name="j" value="10" id="j_good" checked="checked"/> Your pet is fully active and enjoying all their activities.</label></div>
+	</div>
+
+<div id="entry"><div id="heading">O. Ouch or Pain</div></div>
+<div id="entry">
+	<div id="description"><label for="o_poor"><input type="radio" name="o" value="1" id="o_poor"  /> Your pet seems painful (whining, crying, not willing to move) even while taking pain medication. Note: many animals will hide pain or weakness as a survival trait.</label></div>
+	<div id="description"><label for="o_mod"><input type="radio" name="o" value="5" id="o_mod" /> Your pet is on pain medications and they are helping at least 75% of the time.</label></div>
+	<div id="description"><label for="o_good"><input type="radio" name="o" value="10" id="o_good" checked="checked"/> Your pet is pain free.</label></div>
+	</div>
+
+<div id="entry"><div id="heading">U. Uncertainty and Understanding</div></div>
+<div id="entry">
+	<div id="description"><label for="u_poor"><input type="radio" name="u" value="1" id="u_poor"  /> Your pet has a diagnosis (medical condition) that cannot be predicted. You may not understand the diagnosis, or the problem may be prone to sudden, catastrophic events.</label></div>
+	<div id="description"><label for="u_mod"><input type="radio" name="u" value="5" id="u_mod" /> Your pet has a medical condition that can change over time, is currently stable, and you are able to monitor it (with the help of your veterinarian) and make adjustments when necessary. You understand what to watch for, the treatment plan, and when your pet needs medical attention.</label></div>
+	<div id="description"><label for="u_good"><input type="radio" name="u" value="10" id="u_good" checked="checked"/> Your pet is happy and healthy, there are no medical issues beyond routine medical care.</label></div>
+	</div>
+
+<div id="entry"><div id="heading">R. Respiration or Breathing</div></div>
+<div id="entry">
+	<div id="description"><label for="r_poor"><input type="radio" name="r" value="1" id="r_poor"  /> Your pet has severe episodes of difficulty breathing, coughing, or open mouth breathing. They are not eating or drinking in an effort to breathe. At this point you should seek immediate medical attention for your pet.</label></div>
+	<div id="description"><label for="r_mod"><input type="radio" name="r" value="5" id="r_mod" /> Your pet has occasional bouts of coughing, wheezing, or exercise intolerance. They are short (less than 2 minutes) and they are on medication from your veterinarian that can be adjusted to help.</label></div>
+	<div id="description"><label for="r_good"><input type="radio" name="r" value="10" id="r_good" checked="checked"/> Your pet has no coughing, wheezing, or exercise intolerance</label></div>
+	</div>
+
+<div id="entry"><div id="heading">N. Neatness or Hygiene</div></div>
+<div id="entry">
+	<div id="description"><label for="n_poor"><input type="radio" name="n" value="1" id="n_poor"  /> Your pet spends time laying in their urine and/or feces. They may be unable to control their elimination, or be unable to move after elimination. Your pet may have an external tumor or mass that is bleeding, foul smelling, and infected, and you are unable to keep it clean and/or bandaged. Your pet may have pressure sores (bed sores) from lying down and being unable to move.</label></div>
+	<div id="description"><label for="n_mod"><input type="radio" name="n" value="5" id="n_mod" /> Your pet may need assistance to urinate/defecate but they do not spend time lying in their waste. They are able to hold their urine/feces until they get assistance. They may have an external tumor or mass, but it can be kept clean and/or bandaged and it is not infected. They groom themselves, but may need assistance in some areas (example-rear end).</label></div>
+	<div id="description"><label for="n_good"><input type="radio" name="n" value="10" id="n_good" checked="checked"/> Your pet can urinate, defecate, and groom themselves without assistance. They have no medical issues that are causing them to have a bad odor. You can provide any care issues to address their hygiene (baths, trip to the groomer, anal gland expression, teeth cleaning, etc.)</label></div>
+	</div>
+
+<div id="entry"><div id="heading">E. Eating and Drinking</div></div>
+<div id="entry">
+	<div id="description"><label for="e_poor"><input type="radio" name="e" value="1" id="e_poor" /> Your pet is refusing food and water. They may be having vomiting or diarrhea (or both). They may be nauseous. Cats may “hang out” at the water bowl, next to it, or with their heads hanging over it.</label></div>
+	<div id="description"><label for="e_mod"><input type="radio" name="e" value="5" id="e_mod" /> Your pet is eating more slowly, and is not as interested in food as they used to be. They may go back several times before they finish a meal. They are eating slightly less than usual, but are eating their regular food. </label></div>
+	<div id="description"><label for="e_good"><input type="radio" name="e" value="10" id="e_good" checked="checked"/> Your pet is eating and drinking normally.</label></div>
+	</div>
+
+<div id="entry"><div id="heading">Y. You</div></div>
+<div id="entry">
+	<div id="description"><label for="y_poor"><input type="radio" name="y" value="1" id="y_poor"  /> You are constantly worried about your pet. You may not understand what is happening to them. You feel overwhelmed and stressed trying to provide for their needs. You may feel you are unable to provide for their needs physically, emotionally, or financially. You may be worried about how they will fare when you are away on an upcoming trip. There may be tension in the family and disagreement on how to proceed.</label></div>
+	<div id="description"><label for="y_mod"><input type="radio" name="y" value="5" id="y_mod" /> You understand your pet’s condition, and are able, with some effort, to meet their needs. You may have concerns, but they are manageable.</label></div>
+	<div id="description"><label for="y_good"><input type="radio" name="y" value="10" id="y_good" checked="checked"/> You are easily able to meet your pet’s needs, and not worried about any aspect of their care</label></div>
+	</div>
+
+<div id="entry"><div id="heading">S. Social Ability</div></div>
+<div id="entry">
+	<div id="description"><label for="s_poor"><input type="radio" name="s" value="1" id="s_poor"  /> Your pet does not spend time with the family. They may hide, become irritable or snippy if bothered. Some pets that do not enjoy being petted may not seem to care if they are petted. Perhaps your pet is unable physically to get to the room where they usually spend time with others.</label></div>
+	<div id="description"><label for="s_mod"><input type="radio" name="s" value="5" id="s_mod" /> Your pet spends at least half the time with the family. They are not irritable or snippy. They happily greet you when you get home.</label></div>
+	<div id="description"><label for="s_good"><input type="radio" name="s" value="10" id="s_good" checked="checked"/> Your pet enjoys you, the family, and others (including other animals they may know), greets you at the door when you arrive home, and seeks out company.</label></div>
+	</div>
+
+<div id="entry"><div id="question"><button type="submit" value="Submit">Submit</button></div>
+	</div>
+</div>
+
+<div id="results">
+<div id="entry">
+
+	<div id="index">Journeys Score: <span id="journeys_qol_score">__</span></div>
+
+</div>
+</div>
+<script>
+
+document.getElementById("form2").onsubmit=function() {
+        j = parseInt(document.querySelector('input[name = "j"]:checked').value);
+	o = parseInt(document.querySelector('input[name = "o"]:checked').value);
+	u = parseInt(document.querySelector('input[name = "u"]:checked').value);
+	r = parseInt(document.querySelector('input[name = "r"]:checked').value);
+	n = parseInt(document.querySelector('input[name = "n"]:checked').value);
+	e = parseInt(document.querySelector('input[name = "e"]:checked').value);
+	y = parseInt(document.querySelector('input[name = "y"]:checked').value);
+	s = parseInt(document.querySelector('input[name = "s"]:checked').value);
+
+	   journeys = j+o+u+r+n+e+y+s;
+
+	document.getElementById("journeys_qol_score").innerHTML = journeys; ;
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+
+</script>
+
+</div>
+</div>
+</form>
+
+<ul>
+	<li>A score of 80 is a happy, healthy pet! 
+	<li>A score of 8 is a pet that is suffering. 
+	<li>A low score on any of the measures may be a reason to consider euthanasia. 
+</ul>
+</body>
+</html>

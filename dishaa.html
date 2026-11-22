@@ -1,0 +1,341 @@
+﻿<html>
+<head>
+<title>DISHAA Cognitive Dysfunction - calculator</title>
+
+<style>
+
+body {
+background-color: #FFFFFF;
+font-family: Helvetica;
+font-size:14px;
+}
+
+#wrapper
+{
+display:table;
+padding:5px;
+}
+
+#entry {
+display:table-row;
+}
+
+#info {
+display:table-cell;
+width:120px
+}
+
+#box {
+display:table-cell;
+width:100px
+}
+
+#question {
+display:table-cell;
+width: 250px;
+}
+
+#answer {
+display:table-cell;
+width: 80px;
+}
+
+#heading {
+font-size:18px;
+font-weight:bold;
+display:table-cell;
+width: 700px;
+}
+
+#dishaa {
+font-size:18px;
+font-weight:bold;
+display:table-cell;
+width: 200px;
+}
+
+#description
+{
+padding-left:50px;
+display:block;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+
+#results {
+padding:20px;
+}
+
+#index {
+display:table-cell;
+width: 250px;
+font-weight:bold;
+}
+
+#assessment {
+display:table-cell;
+font-weight:bold;
+}
+
+#dishaa_desc {
+padding-left:50px;
+display:table-cell;
+width:300px;
+}
+
+#dishaa_answer {
+display: table-cell;
+width: 85px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+<h1>DISHAA Cognitive Dysfunction - calculator</h1>
+
+<div id="wrapper">
+<div id="entry"><div id="info">Date: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Patient Name: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Patient ID: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Client Name: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+
+</div>
+
+
+
+
+<form id="form3">
+
+<div id="wrapper">
+
+<div id="entry"><div id="dishaa">D. DISORIENTATION</div></div>
+<div id="entry">
+	<div id="dishaa_desc"> Gets stuck, difficulty getting around objects, goes to hinge side of door </div>
+	<div id="dishaa_answer"><label for="stuck_none"><input type="radio" name="stuck" value="0" id="stuck_none" checked="checked" />None</label></div>
+	<div id="dishaa_answer"><label for="stuck_mild"><input type="radio" name="stuck" value="1" id="stuck_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="stuck_moderate"><input type="radio" name="stuck" value="2" id="stuck_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="stuck_severe"><input type="radio" name="stuck" value="3" id="stuck_severe" />Severe</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> Stares blankly at walls, floor, or into space</div>
+	<div id="dishaa_answer"><label for="stares_none"><input type="radio" name="stares" value="0" id="stares_none"  checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="stares_mild"><input type="radio" name="stares" value="1" id="stares_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="stares_moderate"><input type="radio" name="stares" value="2" id="stares_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="stares_severe"><input type="radio" name="stares" value="3" id="stares_severe" />Severe</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> Does not recognize familiar people/familiar pets </div>
+	<div id="dishaa_answer"><label for="recognize_none"><input type="radio" name="recognize" value="0" id="recognize_none"  checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="recognize_mild"><input type="radio" name="recognize" value="1" id="recognize_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="recognize_moderate"><input type="radio" name="recognize" value="2" id="recognize_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="recognize_severe"><input type="radio" name="recognize" value="3" id="recognize_severe" />Severe</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> Gets lost in home or yard </div>
+	<div id="dishaa_answer"><label for="lost_none"><input type="radio" name="lost" value="0" id="lost_none"  checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="lost_mild"><input type="radio" name="lost" value="1" id="lost_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="lost_moderate"><input type="radio" name="lost" value="2" id="lost_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="lost_severe"><input type="radio" name="lost" value="3" id="lost_severe" />Severe</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> Less reactive to visual (sights) or auditory (sounds) stimuli </div>
+	<div id="dishaa_answer"><label for="stimuli_none"><input type="radio" name="stimuli" value="0" id="stimuli_none" checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="stimuli_mild"><input type="radio" name="stimuli" value="1" id="stimuli_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="stimuli_moderate"><input type="radio" name="stimuli" value="2" id="stimuli_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="stimuli_severe"><input type="radio" name="stimuli" value="3" id="stimuli_severe" />Severe</label></div>	
+	</div>
+
+<div id="entry"><div id="dishaa">I. SOCIAL INTERACTIONS</div></div>
+<div id="entry">
+	<div id="dishaa_desc"> More irritable/fearful/aggressive with visitors, family or other animal </div>
+	<div id="dishaa_answer"><label for="irritable_none"><input type="radio" name="irritable" value="0" id="irritable_none"  checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="irritable_mild"><input type="radio" name="irritable" value="1" id="irritable_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="irritable_moderate"><input type="radio" name="irritable" value="2" id="irritable_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="irritable_severe"><input type="radio" name="irritable" value="3" id="irritable_severe" />Severe</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> Decreased interest in approaching, greeting or affection/petting </div>
+	<div id="dishaa_answer"><label for="interest_none"><input type="radio" name="interest" value="0" id="interest_none" checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="interest_mild"><input type="radio" name="interest" value="1" id="interest_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="interest_moderate"><input type="radio" name="interest" value="2" id="interest_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="interest_severe"><input type="radio" name="interest" value="3" id="interest_severe" />Severe</label></div>	
+	</div>
+
+<div id="entry"><div id="dishaa">S. SLEEP/WAKE CYCLES</div></div>
+<div id="entry">
+	<div id="dishaa_desc"> Pacing/restless/sleeps less/waking at night </div>
+	<div id="dishaa_answer"><label for="restless_none"><input type="radio" name="restless" value="0" id="restless_none"  checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="restless_mild"><input type="radio" name="restless" value="1" id="restless_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="restless_moderate"><input type="radio" name="restless" value="2" id="restless_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="restless_severe"><input type="radio" name="restless" value="3" id="restless_severe" />Severe</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> Vocalization at night</div>
+	<div id="dishaa_answer"><label for="vocalization_none"><input type="radio" name="vocalization" value="0" id="vocalization_none"  checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="vocalization_mild"><input type="radio" name="vocalization" value="1" id="vocalization_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="vocalization_moderate"><input type="radio" name="vocalization" value="2" id="vocalization_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="vocalization_severe"><input type="radio" name="vocalization" value="3" id="vocalization_severe" />Severe</label></div>	
+	</div>
+
+<div id="entry"><div id="dishaa">H. HOUSESOILING, LEARNING AND MEMORY</div></div>
+<div id="entry">
+	<div id="dishaa_desc"> Less able to learn new tasks or respond to previously learned commands/name/work </div>
+	<div id="dishaa_answer"><label for="learning_none"><input type="radio" name="learning" value="0" id="learning_none"  checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="learning_mild"><input type="radio" name="learning" value="1" id="learning_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="learning_moderate"><input type="radio" name="learning" value="2" id="learning_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="learning_severe"><input type="radio" name="learning" value="3" id="learning_severe" />Severe</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> Indoor soiling of urine or stool /decreased signaling to go out </div>
+	<div id="dishaa_answer"><label for="soiling_none"><input type="radio" name="soiling" value="0" id="soiling_none"  checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="soiling_mild"><input type="radio" name="soiling" value="1" id="soiling_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="soiling_moderate"><input type="radio" name="soiling" value="2" id="soiling_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="soiling_severe"><input type="radio" name="soiling" value="3" id="soiling_severe" />Severe</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> Difficulty getting dog’s attention/increased distraction/decreased focus </div>
+	<div id="dishaa_answer"><label for="attention_none"><input type="radio" name="attention" value="0" id="attention_none"  checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="attention_mild"><input type="radio" name="attention" value="1" id="attention_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="attention_moderate"><input type="radio" name="attention" value="2" id="attention_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="attention_severe"><input type="radio" name="attention" value="3" id="attention_severe" />Severe</label></div>	
+	</div>
+
+
+<div id="entry"><div id="dishaa">A. ACTIVITY</div></div>
+<div id="entry">
+	<div id="dishaa_desc"> Decrease in exploration or play with toys, family members, other pets </div>
+	<div id="dishaa_answer"><label for="exploration_none"><input type="radio" name="exploration" value="0" id="exploration_none"  checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="exploration_mild"><input type="radio" name="exploration" value="1" id="exploration_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="exploration_moderate"><input type="radio" name="exploration" value="2" id="exploration_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="exploration_severe"><input type="radio" name="exploration" value="3" id="exploration_severe" />Severe</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> Increased activity including aimless pacing or wandering </div>
+	<div id="dishaa_answer"><label for="aimless_none"><input type="radio" name="aimless" value="0" id="aimless_none"  checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="aimless_mild"><input type="radio" name="aimless" value="1" id="aimless_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="aimless_moderate"><input type="radio" name="aimless" value="2" id="aimless_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="aimless_severe"><input type="radio" name="aimless" value="3" id="aimless_severe" />Severe</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> Repetitive behaviors, e.g., circling, chewing, licking, stargazing </div>
+	<div id="dishaa_answer"><label for="repetitive_none"><input type="radio" name="repetitive" value="0" id="repetitive_none"  checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="repetitive_mild"><input type="radio" name="repetitive" value="1" id="repetitive_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="repetitive_moderate"><input type="radio" name="repetitive" value="2" id="repetitive_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="repetitive_severe"><input type="radio" name="repetitive" value="3" id="repetitive_severe" />Severe</label></div>	
+	</div>
+
+<div id="entry"><div id="dishaa">A. ANXIETY</div></div>
+<div id="entry">
+	<div id="dishaa_desc"> Increased anxiety when separated from owners </div>
+	<div id="dishaa_answer"><label for="anxiety_none"><input type="radio" name="anxiety" value="0" id="anxiety_none"  checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="anxiety_mild"><input type="radio" name="anxiety" value="1" id="anxiety_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="anxiety_moderate"><input type="radio" name="anxiety" value="2" id="anxiety_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="anxiety_severe"><input type="radio" name="anxiety" value="3" id="anxiety_severe" />Severe</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> More reactive/fearful to visual (sights) or auditory (sounds) stimuli</div>
+	<div id="dishaa_answer"><label for="fearful_none"><input type="radio" name="fearful" value="0" id="fearful_none"  checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="fearful_mild"><input type="radio" name="fearful" value="1" id="fearful_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="fearful_moderate"><input type="radio" name="fearful" value="2" id="fearful_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="fearful_severe"><input type="radio" name="fearful" value="3" id="fearful_severe" />Severe</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> Increased fear of places/locations (e.g., new environments/going outdoors)</div>
+	<div id="dishaa_answer"><label for="places_none"><input type="radio" name="places" value="0" id="places_none"  checked="checked"/>None</label></div>
+	<div id="dishaa_answer"><label for="places_mild"><input type="radio" name="places" value="1" id="places_mild" />Mild</label></div>
+	<div id="dishaa_answer"><label for="places_moderate"><input type="radio" name="places" value="2" id="places_moderate" />Moderate</label></div>	
+	<div id="dishaa_answer"><label for="places_severe"><input type="radio" name="places" value="3" id="places_severe" />Severe</label></div>	
+	</div>
+
+<div id="entry"><div id="question"><button type="submit" value="Submit">Submit</button></div>
+	</div>
+</div>
+
+<div id="results">
+<div id="entry">
+
+	<div id="index">DISHAA Score: <span id="dishaa_score">__</span></div>
+	<div id="assessment">Potential for CDS: <span id="dishaa_severity">__</span></div>
+</div>
+</div>
+<script>
+
+document.getElementById("form3").onsubmit=function() {
+        stuck = parseInt(document.querySelector('input[name = "stuck"]:checked').value);
+	stares = parseInt(document.querySelector('input[name = "stares"]:checked').value);
+	recognize = parseInt(document.querySelector('input[name = "recognize"]:checked').value);
+	lost = parseInt(document.querySelector('input[name = "lost"]:checked').value);
+	stimuli = parseInt(document.querySelector('input[name = "stimuli"]:checked').value);
+	irritable = parseInt(document.querySelector('input[name = "irritable"]:checked').value);
+	interest = parseInt(document.querySelector('input[name = "interest"]:checked').value);
+	restless = parseInt(document.querySelector('input[name = "restless"]:checked').value);
+	vocalization = parseInt(document.querySelector('input[name = "vocalization"]:checked').value);
+	learning = parseInt(document.querySelector('input[name = "learning"]:checked').value);
+	soiling = parseInt(document.querySelector('input[name = "soiling"]:checked').value);
+	attention = parseInt(document.querySelector('input[name = "attention"]:checked').value);
+	exploration = parseInt(document.querySelector('input[name = "exploration"]:checked').value);
+	aimless = parseInt(document.querySelector('input[name = "aimless"]:checked').value);
+	repetitive = parseInt(document.querySelector('input[name = "repetitive"]:checked').value);
+	anxiety = parseInt(document.querySelector('input[name = "anxiety"]:checked').value);
+	fearful = parseInt(document.querySelector('input[name = "fearful"]:checked').value);
+	places = parseInt(document.querySelector('input[name = "places"]:checked').value);
+
+	   dishaa =
+	stuck
+	+ stares
+	+ recognize
+	+ lost
+	+ stimuli 
+	+ irritable 
+	+ interest 
+	+ restless 
+	+ vocalization 
+	+ learning 
+	+ soiling 
+	+ attention 
+	+ exploration 
+	+ aimless 
+	+ repetitive 
+	+ anxiety 
+	+ fearful 
+	+ places;
+
+	document.getElementById("dishaa_score").innerHTML = dishaa;
+
+if (dishaa >33) {dishaa_assessment = "Severe"}
+	else if (dishaa >=16) {dishaa_assessment = "Moderate"}
+	else if (dishaa >=4) {dishaa_assessment = "Mild"}
+ 	else {dishaa_assessment = "Unlikely"}
+	document.getElementById("dishaa_severity").innerHTML = dishaa_assessment;
+
+
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+
+</script>
+
+</div>
+</div>
+</form>
+
+<ul>
+	<li>A score of 4-15 is consistent with mild, 16-33 is moderate, and >33 is severe CDS.
+</ul>
+</body>
+</html>

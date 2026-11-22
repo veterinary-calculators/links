@@ -1,0 +1,298 @@
+﻿<html>
+<head>
+<title>Cushing's Diagnostic Prediction Tool - calculator </title>
+
+<style>
+
+body {
+background-color: #FFFFFF;
+font-family: Helvetica;
+font-size:14px;
+}
+
+#wrapper
+{
+display:table;
+padding:5px;
+}
+
+#heading {
+font-size:18px;
+font-weight:bold;
+display:table-cell;
+width: 700px;
+}
+
+#entry {
+display:table-row;
+}
+
+#info {
+display:table-cell;
+width:120px
+}
+
+#box {
+display:table-cell;
+width:100px
+}
+
+#question {
+display:table-cell;
+width: 250px;
+}
+
+#answer {
+display:table-cell;
+width: 80px;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+
+#results {
+padding:20px;
+}
+
+#index {
+display:table-cell;
+width: 250px;
+font-weight:bold;
+}
+
+#option
+{
+display:block;
+padding-left:10px;
+font-weight:normal;
+}
+
+#assessment {
+display:table-cell;
+font-weight:bold;
+}
+
+#category {
+display:table-cell;
+padding-left:50px;
+font-weight:bold;
+}
+
+#yesno {
+display:table-cell;
+padding-left:50px;
+width:100px;
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Cushing's Diagnostic Prediction Tool - calculator</h1>
+
+<div id="wrapper">
+<div id="entry"><div id="info">Date: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Patient Name: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Patient ID: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Client Name: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+
+</div>
+
+
+
+
+<form id="form5">
+
+<div id="wrapper">
+
+<div id="entry">
+	<div id="heading">Dog demography</div>
+	</div>
+</div>
+<div id="wrapper">
+<div id="entry">
+	<div id="category">Neuter status
+	<div id="option"><label for="repro_fi"><input type="radio" name="repro" value="0" id="repro_fi" checked="checked" /> Female Intact</label></div>
+	<div id="option"><label for="repro_fs"><input type="radio" name="repro" value="-1" id="repro_fs" /> Female Spayed </label></div>
+	<div id="option"><label for="repro_mi"><input type="radio" name="repro" value="-1" id="repro_mi" /> Male Intact </label></div>
+	<div id="option"><label for="repro_mn"><input type="radio" name="repro" value="-1" id="repro_mn" /> Male Neutered</label></div>
+	</div>
+	</div>
+<div id="entry">
+	<div id="category">Current age
+	<div id="option"><label for="age_young"><input type="radio" name="age" value="0" id="age_young" checked="checked" /> Less than 7 years </label></div>
+	<div id="option"><label for="age_old"><input type="radio" name="age" value="1" id="age_old" /> 7 or more years </label></div>
+	</div>
+	</div>
+<div id="entry">
+	<div id="category">Breed
+	<div id="option"><label for="breed_bichon"><input type="radio" name="breed" value="2" id="breed_bichon"  /> Bichon Frise</label></div>
+	<div id="option"><label for="breed_border"><input type="radio" name="breed" value="1" id=""breed_border" /> Border Terrier </label></div>
+	<div id="option"><label for="breed_labrador"><input type="radio" name="breed" value="-3" id="breed_labrador" /> Labrador Retreiver </label></div>
+	<div id="option"><label for="breed_schnauzer"><input type="radio" name="breed" value="-2" id="breed_schnauzer" /> Schnauzer </label></div>
+	<div id="option"><label for="breed_westie"><input type="radio" name="breed" value="-3" id="breed_westie" /> West Highland White Terrier</label></div>
+	<div id="option"><label for="breed_other"><input type="radio" name="breed" value="0" id="breed_other" checked = "checked" /> Other</label></div>
+	</div>
+	</div>
+</div>
+<div id="wrapper">
+<div id="entry">
+	<div id="heading">Presenting clinical signs</div>
+	</div>
+</div>
+
+<div id="wrapper">
+
+<div id="entry">
+	<div id="yesno">Polydipsia</div>
+	<div id="answer"><label for="pupd_yes"><input type="radio" name="pupd" value="2" id="age_young"/> Yes </label></div>
+	<div id="answer"><label for="pupd_no"><input type="radio" name="pupd" value="0" id="age_old"  checked="checked" /> No </label></div>
+	</div>
+<div id="entry">
+	<div id="yesno">Vomiting</div>
+	<div id="answer"><label for="vomit_yes"><input type="radio" name="vomit" value="-2" id="vomit_yes"/> Yes </label></div>
+	<div id="answer"><label for="vomit_no"><input type="radio" name="vomit" value="0" id="vomit_no"  checked="checked" /> No </label></div>
+	</div>
+	
+<div id="entry">
+	<div id="yesno">Potbelly/Hepatomegaly</div>
+	<div id="answer"><label for="potbelly_yes"><input type="radio" name="potbelly" value="3" id="potbelly_yes" /> Yes </label></div>
+	<div id="answer"><label for="potbelly_no"><input type="radio" name="potbelly" value="0" id="potbelly_no" checked="checked" /> No </label></div>
+	</div>
+	
+<div id="entry">
+	<div id="yesno">Alopecia</div>
+	<div id="answer"><label for="alopecia_yes"><input type="radio" name="alopecia" value="2" id="alopecia_yes" /> Yes </label></div>
+	<div id="answer"><label for="alopecia_no"><input type="radio" name="alopecia" value="0" id="alopecia_no" checked="checked" /> No </label></div>
+	</div>
+	
+<div id="entry">
+	<div id="yesno">Pruritus</div>
+		<div id="answer"><label for="pruritus_yes"><input type="radio" name="pruritus" value="-2" id="pruritus_yes" /> Yes </label></div>
+		<div id="answer"><label for="pruritus_no"><input type="radio" name="pruritus" value="0" id="pruritus_no" checked="checked" /> No </label></div>
+	</div>
+	
+</div>
+
+<div id="wrapper">
+
+<div id="entry">
+	<div id="heading">Laboratory factors</div>
+	</div>
+</div>
+<div id="wrapper">
+<div id="entry">
+	<div id="category">Urine specific gravity
+	<div id="option"><label for="usg_dilute"><input type="radio" name="usg" value="0" id="usg_dilute"/> Dilute (<= 1.020)</label></div>
+	<div id="option"><label for="usg_not_dilute"><input type="radio" name="usg" value="-2" id="usg_not_dilute" /> Not dilute (> 1.020) </label></div>
+	<div id="option"><label for="usg_not_recorded"><input type="radio" name="usg" value="-1" id="usg_not_recorded"  checked="checked" /> Not recorded  </label></div>
+	</div>
+	</div>
+<div id="entry">
+	<div id="category">Serum ALP
+	<div id="option"><label for="alp_elevated"><input type="radio" name="alp" value="0" id="alp_elevated" /> Elevated</label></div>
+	<div id="option"><label for="alp_not_elevated"><input type="radio" name="alp" value="-3" id="alp_not_elevated" /> Not elevated </label> </div>
+	<div id="option"><label for="alp_not_recorded"><input type="radio" name="alp" value="0" id="alp_not_recorded"  checked="checked"/> Not recorded </label></div>
+	</div>
+	</div>
+
+</div>
+
+
+
+<div id="entry"><div id="question"><button type="submit" value="Submit">Submit</button></div>
+	</div>
+</div>
+
+<div id="results">
+<div id="entry">
+
+	<div id="index">Cushings Prediction Score: <span id="cushings_score">__</span></div>
+	<div id="assessment">Likelihood of Cushings: <span id="cushings_prediction">__</span></div>%
+
+</div>
+</div>
+
+<script>
+document.getElementById("form5").onsubmit=function() {
+        repro = parseInt(document.querySelector('input[name = "repro"]:checked').value);
+	age = parseInt(document.querySelector('input[name = "age"]:checked').value);
+	breed = parseInt(document.querySelector('input[name = "breed"]:checked').value);
+	pupd = parseInt(document.querySelector('input[name = "pupd"]:checked').value);
+	vomit = parseInt(document.querySelector('input[name = "vomit"]:checked').value);
+	potbelly = parseInt(document.querySelector('input[name = "potbelly"]:checked').value);
+	alopecia = parseInt(document.querySelector('input[name = "alopecia"]:checked').value);
+	pruritus = parseInt(document.querySelector('input[name = "pruritus"]:checked').value);
+	usg = parseInt(document.querySelector('input[name = "usg"]:checked').value);
+	alp = parseInt(document.querySelector('input[name = "alp"]:checked').value);
+
+	   cushings_value = 
+	+ repro
+	+ age
+	+ breed
+	+ pupd
+	+ vomit
+	+ potbelly
+	+ alopecia
+	+ pruritus
+	+ usg
+	+ alp
+	;
+
+	document.getElementById("cushings_score").innerHTML = cushings_value;
+
+if (cushings_value == -13) {cushings_percent = "0"}
+ else if (cushings_value == -12) {cushings_percent = "1"}
+ else if (cushings_value == -11) {cushings_percent = "1"}
+ else if (cushings_value == -10) {cushings_percent = "1"}
+ else if (cushings_value == -9) {cushings_percent = "2"}
+ else if (cushings_value == -8) {cushings_percent = "3"}
+ else if (cushings_value == -7) {cushings_percent = "4"}
+ else if (cushings_value == -6) {cushings_percent = "5"}
+ else if (cushings_value == -5) {cushings_percent = "8"}
+ else if (cushings_value == -4) {cushings_percent = "11"}
+ else if (cushings_value == -3) {cushings_percent = "15"}
+ else if (cushings_value == -2) {cushings_percent = "20"}
+ else if (cushings_value == -1) {cushings_percent = "27"}
+ else if (cushings_value == 0) {cushings_percent = "35"}
+ else if (cushings_value == 1) {cushings_percent = "44"}
+ else if (cushings_value == 2) {cushings_percent = "53"}
+ else if (cushings_value == 3) {cushings_percent = "63"}
+ else if (cushings_value == 4) {cushings_percent = "71"}
+ else if (cushings_value == 5) {cushings_percent = "78"}
+ else if (cushings_value == 6) {cushings_percent = "84"}
+ else if (cushings_value == 7) {cushings_percent = "88"}
+ else if (cushings_value == 8) {cushings_percent = "92"}
+ else if (cushings_value == 9) {cushings_percent = "94"}
+ else if (cushings_value == 10) {cushings_percent = "96"}
+  else {cushings_percent = "ERROR"}
+	document.getElementById("cushings_prediction").innerHTML = cushings_percent;
+;
+
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+
+</script>
+
+
+</div>
+
+</div>
+
+</form>
+
+</body>
+</html>

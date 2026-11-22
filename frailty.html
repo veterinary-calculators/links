@@ -1,0 +1,382 @@
+<html>
+<head>
+<title>Canine Frailty Index - calculator</title>
+
+<style>
+
+body {
+background-color: #FFFFFF;
+font-family: Helvetica;
+font-size:14px;
+}
+
+#wrapper
+{
+display:table;
+padding:5px;
+}
+
+#entry {
+display:table-row;
+}
+
+#info {
+display:table-cell;
+width:120px
+}
+
+#box {
+display:table-cell;
+width:100px
+}
+
+#question {
+display:table-cell;
+width: 250px;
+}
+
+#answer {
+display:table-cell;
+width: 80px;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+
+#results {
+padding:20px;
+}
+
+#index {
+display:table-cell;
+width: 250px;
+font-weight:bold;
+}
+
+#assessment {
+display:table-cell;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Canine Frailty Index - calculator</h1>
+
+<div id="wrapper">
+<div id="entry"><div id="info">Date: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Patient Name: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Patient ID: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Client Name: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+
+</div>
+
+
+
+
+<form id="form1">
+
+<div id="wrapper">
+
+
+<div id="entry"><div id="question">1. Assistance for standing up</div>
+	<div id="answer"><label for="stand_no"><input type="radio" name="stand" value="0" id="stand_no" checked="checked" /> No</label></div>
+	<div id="answer"><label for="stand_yes"><input type="radio" name="stand" value="1" id="stand_yes" /> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">2. Decreased appetite</div>
+	<div id="answer"><input type="radio" name="appetite" value="0" id="appetite_no" checked="checked"/> No</label></div>
+	<div id="answer"><input type="radio" name="appetite" value="1" id="appetite_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">3. Assistance for eating</div>
+	<div id="answer"><label for="eating_no"><input type="radio" name="eating" value="0" id="eating_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="eating_yes"><input type="radio" name="eating" value="1" id="eating_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">4. Incontinence</div>
+	<div id="answer"><label for="incontinence_no"><input type="radio" name="incontinence" value="0" id="incontinence_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="incontinence_yes"><input type="radio" name="incontinence" value="1" id="incontinence_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">5. Assistance for climbing stairs</div>
+	<div id="answer"><label for="stairs_no"><input type="radio" name="stairs" value="0" id="stairs_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="stairs_yes"><input type="radio" name="stairs" value="1" id="stairs_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">6. Decreased activity last year</div>
+	<div id="answer"><label for="activity_no"><input type="radio" name="activity" value="0" id="activity_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="activity_yes"><input type="radio" name="activity" value="1" id="activity_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">7. Reduced cognitive ability</div>
+	<div id="answer"><label for="cognitive_no"><input type="radio" name="cognitive" value="0" id="cognitive_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="cognitive_yes"><input type="radio" name="cognitive" value="1" id="cognitive_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">8. Reduced vitality last year</div>
+	<div id="answer"><label for="vitality_no"><input type="radio" name="vitality" value="0" id="vitality_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="vitality_yes"><input type="radio" name="vitality" value="1" id="vitality_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">9. Weakness during exercise</div>
+	<div id="answer"><label for="weakness_no"><input type="radio" name="weakness" value="0" id="weakness_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="weakness_yes"><input type="radio" name="weakness" value="1" id="weakness_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">10. Congenital defects</div>
+	<div id="answer"><label for="congenital_no"><input type="radio" name="congenital" value="0" id="congenital_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="congenital_yes"><input type="radio" name="congenital" value="1" id="congenital_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">11. Weight loss (unintentional)</div>
+	<div id="answer"><label for="weight_no"><input type="radio" name="weight" value="0" id="weight_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="weight_yes"><input type="radio" name="weight" value="1" id="weight_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">12. Hair greying/lightening</div>
+	<div id="answer"><label for="hair_no"><input type="radio" name="hair" value="0" id="hair_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="hair_yes"><input type="radio" name="hair" value="1" id="hair_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">13. Chronic Therapies</div>
+	<div id="answer"><label for="therapy_no"><input type="radio" name="therapy" value="0" id="therapy_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="therapy_yes"><input type="radio" name="therapy" value="1" id="therapy_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">14. Epilepsy</div>
+	<div id="answer"><label for="epilepsy_no"><input type="radio" name="epilepsy" value="0" id="epilepsy_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="epilepsy_yes"><input type="radio" name="epilepsy" value="1" id="epilepsy_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">15. Episodes of disorientation</div>
+	<div id="answer"><label for="disorientation_no"><input type="radio" name="disorientation" value="0" id="disorientation_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="disorientation_yes"><input type="radio" name="disorientation" value="1" id="disorientation_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">16. Chronic infective disease</div>
+	<div id="answer"><label for="infective_no"><input type="radio" name="infective" value="0" id="infective_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="infective_yes"><input type="radio" name="infective" value="1" id="infective_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">17. Endocrine disease</div>
+	<div id="answer"><label for="endocrine_no"><input type="radio" name="endocrine" value="0" id="endocrine_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="endocrine_yes"><input type="radio" name="endocrine" value="1" id="endocrine_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">18. Chronic inflammation</div>
+	<div id="answer"><label for="inflammation_no"><input type="radio" name="inflammation" value="0" id="inflammation_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="inflammation_yes"><input type="radio" name="inflammation" value="1" id="inflammation_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">19. Acute vascular problems</div>
+	<div id="answer"><label for="vascular"><input type="radio" name="vascular" value="0" id="vascular_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="vascular"><input type="radio" name="vascular" value="1" id="vascular_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">20. Cancer</div>
+	<div id="answer"><label for="cancer_no"><input type="radio" name="cancer" value="0" id="cancer_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="cancer_yes"><input type="radio" name="cancer" value="1" id="cancer_yes"/> Yes</label></div>
+	</div>
+
+<div id="entry"><div id="question">21. Diabetes</div>
+	<div id="answer"><label for="diabetes_no"><input type="radio" name="diabetes" value="0" id="diabetes_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="diabetes_yes"><input type="radio" name="diabetes" value="1" id="diabetes_yes"/> Yes</label></div>
+	</div>
+
+
+<div id="entry"><div id="question">22. Osteoarthrosis</div>
+	<div id="answer"><label for="arthritis_no"><input type="radio" name="arthritis" value="0" id="arthritis_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="arthritis_mild"><input type="radio" name="arthritis" value="1" id="arthritis_mild"/> Mild</label></div>
+	<div id="answer"><label for="arthritis_severe"><input type="radio" name="arthritis" value="2" id="arthritis_severe"/> Severe</label></div>
+	</div>
+
+<div id="entry"><div id="question">23. Hearing impairment</div>
+	<div id="answer"><label for="hearing_no"><input type="radio" name="hearing" value="0" id="hearing_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="hearing_mild"><input type="radio" name="hearing" value="1" id="hearing_mild"/> Mild</label></div>
+	<div id="answer"><label for="hearing_severe"><input type="radio" name="hearing" value="2" id="hearing_severe"/> Severe</label></div>
+	</div>
+
+<div id="entry"><div id="question">24. Cardiopathy</div>
+	<div id="answer"><label for="cardiopathy_no"><input type="radio" name="cardiopathy" value="0" id="cardiopathy_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="cardiopathy_mild"><input type="radio" name="cardiopathy" value="1" id="cardiopathy_mild"/> Mild</label></div>
+	<div id="answer"><label for="cardiopathy_severe"><input type="radio" name="cardiopathy" value="2" id="cardiopathy_severe"/> Severe</label></div>
+	</div>
+
+<div id="entry"><div id="question">25. Chronic respiratory disease</div>
+	<div id="answer"><label for="respiratory_no"><input type="radio" name="respiratory" value="0" id="respiratory_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="respiratory_mild"><input type="radio" name="respiratory" value="1" id="respiratory_mild"/> Mild</label></div>
+	<div id="answer"><label for="respiratory_severe"><input type="radio" name="respiratory" value="2" id="respiratory_severe"/> Severe</label></div>
+	</div>
+
+<div id="entry"><div id="question">26. Hepatopathy</div>
+	<div id="answer"><label for="hepatopathy_no"><input type="radio" name="hepatopathy" value="0" id="hepatopathy_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="hepatopathy_mild"><input type="radio" name="hepatopathy" value="1" id="hepatopathy_mild"/> Mild</label></div>
+	<div id="answer"><label for="hepatopathy_severe"><input type="radio" name="hepatopathy" value="2" id="hepatopathy_severe"/> Severe</label></div>
+	</div>
+
+<div id="entry"><div id="question">27. Neurological deficits</div>
+	<div id="answer"><label for="neuro_no"><input type="radio" name="neuro" value="0" id="neuro_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="neuro_mild"><input type="radio" name="neuro" value="1" id="neuro_mild"/> Mild</label></div>
+	<div id="answer"><label for="neuro_severe"><input type="radio" name="neuro" value="2" id="neuro_severe"/> Severe</label></div>
+	</div>
+
+<div id="entry"><div id="question">28. Diseases of the oral cavity</div>
+	<div id="answer"><label for="oral_no"><input type="radio" name="oral" value="0" id="oral_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="oral_mild"><input type="radio" name="oral" value="1" id="oral_mild"/> Mild</label></div>
+	<div id="answer"><label for="oral_severe"><input type="radio" name="oral" value="2" id="oral_severe"/> Severe</label></div>
+	</div>
+
+<div id="entry"><div id="question">29. Visual impairment</div>
+	<div id="answer"><label for="visual_no"><input type="radio" name="visual" value="0" id="visual_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="visual_mild"><input type="radio" name="visual" value="1" id="visual_mild"/> Mild</label></div>
+	<div id="answer"><label for="visual_severe"><input type="radio" name="visual" value="2" id="visual_severe"/> Severe</label></div>
+	</div>
+
+<div id="entry"><div id="question">30. Chronic digestive disease</div>
+	<div id="answer"><label for="digestive_no"><input type="radio" name="digestive" value="0" id="digestive_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="digestive_mild"><input type="radio" name="digestive" value="1" id="digestive_mild"/> Mild</label></div>
+	<div id="answer"><label for="digestive_severe"><input type="radio" name="digestive" value="2" id="digestive_severe"/> Severe</label></div>
+	</div>
+
+<div id="entry"><div id="question">31. Hematopoietic disease</div>
+	<div id="answer"><label for="hematopoietic_no"><input type="radio" name="hematopoietic" value="0" id="hematopoietic_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="hematopoietic_mild"><input type="radio" name="hematopoietic" value="1" id="hematopoietic_mild"/> Mild</label></div>
+	<div id="answer"><label for="hematopoietic_severe"><input type="radio" name="hematopoietic" value="2" id="hematopoietic_severe"/> Severe</label></div>
+	</div>
+
+<div id="entry"><div id="question">32. Dermatological diseases</div>
+	<div id="answer"><label for="derm_no"><input type="radio" name="derm" value="0" id="derm_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="derm_mild"><input type="radio" name="derm" value="1" id="derm_mild"/> Mild</label></div>
+	<div id="answer"><label for="derm_severe"><input type="radio" name="derm" value="2" id="derm_severe"/> Severe</label></div>
+	</div>
+
+<div id="entry"><div id="question">33. Chronic kidney disease</div>
+	<div id="answer"><label for="kidney_no"><input type="radio" name="kidney" value="0" id="kidney_no" checked="checked"/> No</label></div>
+	<div id="answer"><label for="kidney_mild"><input type="radio" name="kidney" value="1" id="kidney_mild"/> Mild</label></div>
+	<div id="answer"><label for="kidney_severe"><input type="radio" name="kidney" value="2" id="kidney_severe"/> Severe</label></div>
+	</div>
+
+<div id="entry"><div id="question"><button type="submit" value="Submit">Submit</button></div>
+	</div>
+</div>
+
+<div id="results">
+<div id="entry">
+
+	<div id="index">Canine Frailty Index: <span id="grade">__</span></div>
+	<div id="assessment">Frailty assessment (>0.25): <span id="grade2">__</span></div>
+
+</div>
+</div>
+<script>
+
+document.getElementById("form1").onsubmit=function() {
+        stand = parseInt(document.querySelector('input[name = "stand"]:checked').value);
+     	appetite = parseInt(document.querySelector('input[name = "appetite"]:checked').value);
+	eating = parseInt(document.querySelector('input[name = "eating"]:checked').value);
+	incontinence = parseInt(document.querySelector('input[name = "incontinence"]:checked').value);
+	stairs = parseInt(document.querySelector('input[name = "stairs"]:checked').value);
+	activity = parseInt(document.querySelector('input[name = "activity"]:checked').value);
+	cognitive = parseInt(document.querySelector('input[name = "cognitive"]:checked').value);
+	vitality = parseInt(document.querySelector('input[name = "vitality"]:checked').value);
+	weakness = parseInt(document.querySelector('input[name = "weakness"]:checked').value);
+	congenital = parseInt(document.querySelector('input[name = "congenital"]:checked').value);
+	weight = parseInt(document.querySelector('input[name = "weight"]:checked').value);
+	hair = parseInt(document.querySelector('input[name = "hair"]:checked').value);
+	therapy = parseInt(document.querySelector('input[name = "therapy"]:checked').value);
+	epilepsy = parseInt(document.querySelector('input[name = "epilepsy"]:checked').value);
+	disorientation = parseInt(document.querySelector('input[name = "disorientation"]:checked').value);
+	infective = parseInt(document.querySelector('input[name = "infective"]:checked').value);
+	endocrine = parseInt(document.querySelector('input[name = "endocrine"]:checked').value);
+	inflammation = parseInt(document.querySelector('input[name = "inflammation"]:checked').value);
+	vascular = parseInt(document.querySelector('input[name = "vascular"]:checked').value);
+	cancer = parseInt(document.querySelector('input[name = "cancer"]:checked').value);
+	diabetes = parseInt(document.querySelector('input[name = "diabetes"]:checked').value);
+	arthritis= parseInt(document.querySelector('input[name = "arthritis"]:checked').value);
+	hearing = parseInt(document.querySelector('input[name = "hearing"]:checked').value);
+	cardiopathy = parseInt(document.querySelector('input[name = "cardiopathy"]:checked').value);
+	respiratory = parseInt(document.querySelector('input[name = "respiratory"]:checked').value);
+	hepatopathy = parseInt(document.querySelector('input[name = "hepatopathy"]:checked').value);
+	neuro = parseInt(document.querySelector('input[name = "neuro"]:checked').value);
+	oral = parseInt(document.querySelector('input[name = "oral"]:checked').value);
+	visual = parseInt(document.querySelector('input[name = "visual"]:checked').value);
+	digestive = parseInt(document.querySelector('input[name = "digestive"]:checked').value);
+	hematopoietic = parseInt(document.querySelector('input[name = "hematopoietic"]:checked').value);
+	derm = parseInt(document.querySelector('input[name = "derm"]:checked').value);
+	kidney = parseInt(document.querySelector('input[name = "kidney"]:checked').value);
+
+	   result = (stand
+		+ appetite 
+		+ eating 
+		+ incontinence 
+		+ stairs 
+		+ activity 
+		+ cognitive 
+		+ vitality 
+		+ weakness 
+		+ congenital 
+		+ weight 
+		+ hair 
+		+ therapy 
+		+ epilepsy 
+		+ disorientation 
+		+ infective 
+		+ endocrine 
+		+ inflammation 
+		+ vascular 
+		+ cancer
+		+ diabetes
+		+ arthritis/2
+		+ hearing/2
+		+ cardiopathy/2
+		+ respiratory/2
+		+ hepatopathy/2
+		+ neuro/2
+		+ oral/2
+		+ visual/2
+		+ digestive/2
+		+ hematopoietic/2
+		+ derm/2
+		+ kidney/2)/33
+		;
+
+	document.getElementById("grade").innerHTML = result.toFixed(3); ;
+
+if (result >=0.25) {result2 = "Yes"}
+  else {result2 = "No"}
+	document.getElementById("grade2").innerHTML = result2;
+
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+
+</script>
+
+
+</div>
+
+</div>
+
+</form>
+
+<ul>
+	<li>A yearly routine examination is recommended for every dog.
+	<li>Geriatric animals should be assessed at least every 6 months.
+	<li>Frail dogs should be examined at least every 3 months.
+</ul>
+</body>
+</html>

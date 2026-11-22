@@ -1,0 +1,183 @@
+﻿<html>
+<head>
+<title>Diabetes Clinical Score - calculator</title>
+
+<style>
+
+body {
+background-color: #FFFFFF;
+font-family: Helvetica;
+font-size:14px;
+}
+
+#wrapper
+{
+display:table;
+padding:5px;
+}
+
+#entry {
+display:table-row;
+}
+
+#info {
+display:table-cell;
+width:120px
+}
+
+#box {
+display:table-cell;
+width:100px
+}
+
+#question {
+display:table-cell;
+width: 250px;
+}
+
+#answer {
+display:table-cell;
+width: 80px;
+}
+
+#heading {
+font-size:18px;
+font-weight:bold;
+display:table-cell;
+width: 700px;
+}
+
+#description
+{
+padding-left:50px;
+display:block;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+
+#results {
+padding:20px;
+}
+
+#index {
+display:table-cell;
+width: 250px;
+font-weight:bold;
+}
+
+#assessment {
+display:table-cell;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Diabetes Clinical Score - calculator</h1>
+
+<div id="wrapper">
+<div id="entry"><div id="info">Date: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Patient Name: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Patient ID: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Client Name: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Insulin type, units, and frequency </div>
+	<div id="box"><input type="text"></div>
+	</div>
+
+</div>
+
+
+
+
+<form id="form4">
+
+<div id="wrapper">
+
+
+<div id="entry"><div id="heading">Unintended Weight Loss</div></div>
+<div id="entry">
+	<div id="description"><label for="dcs_weight_none"><input type="radio" name="dcs_weight" value="0" id="dcs_weight_none" checked="checked" /> None, or gained since last examined</label></div>
+	<div id="description"><label for="dcs_weight_mild"><input type="radio" name="dcs_weight" value="1" id="dcs_weight_mild"  /> Mild (<5% loss)</label></div>
+	<div id="description"><label for="dcs_weight_mod"><input type="radio" name="dcs_weight" value="2" id="dcs_weight_mod"  /> Moderate (5-10% loss)</label></div>
+	<div id="description"><label for="dcs_weight_severe"><input type="radio" name="dcs_weight" value="3" id="dcs_weight_severe"  /> Severe (>10% loss)</label></div>
+	</div>
+
+<div id="entry"><div id="heading">Polyuria and Polydipsia</div></div>
+<div id="entry">
+	<div id="description"><label for="dcs_pupd_none"><input type="radio" name="dcs_pupd" value="0" id="dcs_pupd_none" checked="checked" /> Normal </label></div>
+	<div id="description"><label for="dcs_pupd_mild"><input type="radio" name="dcs_pupd" value="1" id="dcs_pupd_mild"  /> Mild (some increase noted by owner)</label></div>
+	<div id="description"><label for="dcs_pupd_mod"><input type="radio" name="dcs_pupd" value="2" id="dcs_pupd_mod"  /> Moderate (increased filling of water bowl)</label></div>
+	<div id="description"><label for="dcs_pupd_severe"><input type="radio" name="dcs_pupd" value="3" id="dcs_pupd_severe"  /> Severe (constantly at bowl)</label></div>
+	</div>
+
+<div id="entry"><div id="heading">Appetite</div></div>
+<div id="entry">
+	<div id="description"><label for="dcs_app_none"><input type="radio" name="dcs_app" value="0" id="dcs_app_none" checked="checked" /> Normal or decreased appetite (if decreased appetite exclude DKA or concurrent disease) </label></div>
+	<div id="description"><label for="dcs_app_mild"><input type="radio" name="dcs_app" value="1" id="dcs_app_mild"  /> Mild polyphagia (finishes eagerly) (some increase noted by owner)</label></div>
+	<div id="description"><label for="dcs_app_mod"><input type="radio" name="dcs_app" value="2" id="dcs_app_mod"  /> Moderate polyphagia (finishes eagerly and begs for more)</label></div>
+	<div id="description"><label for="dcs_app_severe"><input type="radio" name="dcs_app" value="3" id="dcs_app_severe"  /> Severe polyphagia (obsessed with food)</label></div>
+	</div>
+
+<div id="entry"><div id="heading">Attitude and Activity</div></div>
+<div id="entry">
+	<div id="description"><label for="dcs_act_none"><input type="radio" name="dcs_act" value="0" id="dcs_act_none" checked="checked" /> Normal </label></div>
+	<div id="description"><label for="dcs_act_mild"><input type="radio" name="dcs_act" value="1" id="dcs_act_mild"  /> Mild decrease (a bit less running and jumping)</label></div>
+	<div id="description"><label for="dcs_act_mod"><input type="radio" name="dcs_act" value="2" id="dcs_act_mod"  /> Moderate decrease (a lot less running and jumping)</label></div>
+	<div id="description"><label for="dcs_act_severe"><input type="radio" name="dcs_act" value="3" id="dcs_act_severe"  /> Severe decrease (lying about all the time) (*consider DKA in the ill patient with diabetes mellitus)</label></div>
+	</div>
+
+
+<div id="entry"><div id="question"><button type="submit" value="Submit">Submit</button></div>
+	</div>
+</div>
+
+<div id="results">
+<div id="entry">
+
+	<div id="index">Diabetic Clinical Score: <span id="dcs_score">__</span>/12</div>
+
+</div>
+</div>
+<script>
+
+document.getElementById("form4").onsubmit=function() {
+        dcs_weight = parseInt(document.querySelector('input[name = "dcs_weight"]:checked').value);
+	dcs_pupd = parseInt(document.querySelector('input[name = "dcs_pupd"]:checked').value);
+	dcs_app = parseInt(document.querySelector('input[name = "dcs_app"]:checked').value);
+	dcs_act = parseInt(document.querySelector('input[name = "dcs_act"]:checked').value);
+
+
+	   dcs = dcs_weight + dcs_pupd + dcs_app + dcs_act;
+
+	document.getElementById("dcs_score").innerHTML = dcs;
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+
+</script>
+
+</div>
+</div>
+</form>
+
+<ul>
+	<li> Treatment aim: lowest score possible without unacceptably high risk of hypoglycaemia (ideally, <2 or acceptable to DVM and O)
+	<li> For weight loss, compare with last weight
+	<li> For all other questions, compare with situation prior to diabetes
+</ul>
+</body>
+</html>

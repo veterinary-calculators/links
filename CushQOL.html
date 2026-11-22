@@ -1,0 +1,351 @@
+﻿<html>
+<head>
+<title>CushQoL-pet: Cushing’s Quality-of-life - calculator</title>
+
+<style>
+
+body {
+background-color: #FFFFFF;
+font-family: Helvetica;
+font-size:14px;
+}
+
+#wrapper
+{
+display:table;
+padding:5px;
+}
+
+#entry {
+display:table-row;
+}
+
+#info {
+display:table-cell;
+width:120px
+}
+
+#box {
+display:table-cell;
+width:100px
+}
+
+#question {
+display:table-cell;
+width: 250px;
+}
+
+#answer {
+display:table-cell;
+width: 80px;
+}
+
+#heading {
+font-size:18px;
+font-weight:bold;
+display:table-cell;
+width: 700px;
+}
+
+#dishaa {
+font-size:18px;
+font-weight:bold;
+display:table-cell;
+width: 200px;
+}
+
+#description
+{
+padding-left:50px;
+display:block;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+
+#results {
+padding:20px;
+}
+
+#index {
+display:table-cell;
+width: 250px;
+font-weight:bold;
+}
+
+#assessment {
+display:table-cell;
+font-weight:bold;
+}
+
+#dishaa_desc {
+padding-left:50px;
+display:table-cell;
+width:300px;
+}
+
+#cushqol_answer {
+display: table-cell;
+width: 95px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+<h1>CushQoL-pet: Cushing’s Quality-of-life - calculator</h1>
+
+<div id="wrapper">
+<div id="entry"><div id="info">Date: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Patient Name: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Patient ID: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+<div id="entry"><div id="info">Client Name: </div>
+	<div id="box"><input type="text"></div>
+	</div>
+
+</div>
+
+
+
+
+<form id="form6">
+
+<div id="wrapper">
+
+<div id="entry"><div id="dishaa">CLINICAL IMPACT</div></div>
+<div id="entry">
+	<div id="dishaa_desc"> My dog is excessively thirsty </div>
+	<div id="cushqol_answer"><label for="thirsty_none"><input type="radio" name="thirsty" value="0" id="thirsty_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="thirsty_mild"><input type="radio" name="thirsty" value="1" id="thirsty_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="thirsty_moderate"><input type="radio" name="thirsty" value="2" id="thirsty_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="thirsty_severe"><input type="radio" name="thirsty" value="3" id="thirsty_severe" />Always</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> My dog urinates in the house</div>
+	<div id="cushqol_answer"><label for="urinates_none"><input type="radio" name="urinates" value="0" id="urinates_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="urinates_mild"><input type="radio" name="urinates" value="1" id="urinates_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="urinates_moderate"><input type="radio" name="urinates" value="2" id="urinates_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="urinates_severe"><input type="radio" name="urinates" value="3" id="urinates_severe" />Always</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> My dog is excessively hungry </div>
+	<div id="cushqol_answer"><label for="hungry_none"><input type="radio" name="hungry" value="0" id="hungry_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="hungry_mild"><input type="radio" name="hungry" value="1" id="hungry_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="hungry_moderate"><input type="radio" name="hungry" value="2" id="hungry_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="hungry_severe"><input type="radio" name="hungry" value="3" id="hungry_severe" />Always</label></div>		
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> My dog pants excessively </div>
+	<div id="cushqol_answer"><label for="pants_none"><input type="radio" name="pants" value="0" id="pants_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="pants_mild"><input type="radio" name="pants" value="1" id="pants_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="pants_moderate"><input type="radio" name="pants" value="2" id="pants_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="pants_severe"><input type="radio" name="pants" value="3" id="pants_severe" />Always</label></div>	
+	</div>
+
+
+
+<div id="entry"><div id="dishaa">DOG’S DEMEANOUR</div></div>
+<div id="entry">
+	<div id="dishaa_desc"> My dog is depressed and quiet </div>
+	<div id="cushqol_answer"><label for="depressed_none"><input type="radio" name="depressed" value="0" id="depressed_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="depressed_mild"><input type="radio" name="depressed" value="1" id="depressed_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="depressed_moderate"><input type="radio" name="depressed" value="2" id="depressed_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="depressed_severe"><input type="radio" name="depressed" value="3" id="depressed_severe" />Always</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> My dog has no energy</div>
+	<div id="cushqol_answer"><label for="energy_none"><input type="radio" name="energy" value="0" id="energy_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="energy_mild"><input type="radio" name="energy" value="1" id="energy_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="energy_moderate"><input type="radio" name="energy" value="2" id="energy_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="energy_severe"><input type="radio" name="energy" value="3" id="energy_severe" />Always</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> My dog doesn’t want to interact with other people/dogs </div>
+	<div id="cushqol_answer"><label for="interact_none"><input type="radio" name="interact" value="0" id="interact_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="interact_mild"><input type="radio" name="interact" value="1" id="interact_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="interact_moderate"><input type="radio" name="interact" value="2" id="interact_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="interact_severe"><input type="radio" name="interact" value="3" id="interact_severe" />Always</label></div>		
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> My dog is reluctant to play with me </div>
+	<div id="cushqol_answer"><label for="play_none"><input type="radio" name="play" value="0" id="play_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="play_mild"><input type="radio" name="play" value="1" id="play_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="play_moderate"><input type="radio" name="play" value="2" id="play_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="play_severe"><input type="radio" name="play" value="3" id="play_severe" />Always</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> My dog seems disorientated/confused </div>
+	<div id="cushqol_answer"><label for="confused_none"><input type="radio" name="confused" value="0" id="confused_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="confused_mild"><input type="radio" name="confused" value="1" id="confused_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="confused_moderate"><input type="radio" name="confused" value="2" id="confused_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="confused_severe"><input type="radio" name="confused" value="3" id="confused_severe" />Always</label></div>	
+	</div>
+
+<div id="entry"><div id="dishaa">PHYSICAL IMPACT</div></div>
+<div id="entry">
+	<div id="dishaa_desc"> I struggle with my dog’s weight </div>
+	<div id="cushqol_answer"><label for="weight_none"><input type="radio" name="weight" value="0" id="weight_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="weight_mild"><input type="radio" name="weight" value="1" id="weight_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="weight_moderate"><input type="radio" name="weight" value="2" id="weight_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="weight_severe"><input type="radio" name="weight" value="3" id="weight_severe" />Always</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> My dog’s hair coat is in a poor condition</div>
+	<div id="cushqol_answer"><label for="coat_none"><input type="radio" name="coat" value="0" id="coat_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="coat_mild"><input type="radio" name="coatk" value="1" id="coat_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="coat_moderate"><input type="radio" name="coat" value="2" id="coat_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="coat_severe"><input type="radio" name="coat" value="3" id="coat_severe" />Always</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> My dog’s skin appears to be uncomfortable (e.g. dry/tight) </div>
+	<div id="cushqol_answer"><label for="skin_none"><input type="radio" name="skin" value="0" id="skin_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="skin_mild"><input type="radio" name="skin" value="1" id="skin_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="skin_moderate"><input type="radio" name="skin" value="2" id="skin_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="skin_severe"><input type="radio" name="skin" value="3" id="skin_severe" />Always</label></div>		
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> My dog appears to be in a poor physical condition (e.g. muscle loss/pot bellied)</div>
+	<div id="cushqol_answer"><label for="condition_none"><input type="radio" name="condition" value="0" id="condition_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="condition_mild"><input type="radio" name="condition" value="1" id="condition_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="condition_moderate"><input type="radio" name="condition" value="2" id="condition_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="condition_severe"><input type="radio" name="condition" value="3" id="condition_severe" />Always</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> My dog struggles to walk very far </div>
+	<div id="cushqol_answer"><label for="walk_none"><input type="radio" name="walk" value="0" id="walk_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="walk_mild"><input type="radio" name="walk" value="1" id="walk_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="walk_moderate"><input type="radio" name="walk" value="2" id="walk_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="walk_severe"><input type="radio" name="walk" value="3" id="walk_severe" />Always</label></div>	
+	</div>
+
+<div id="entry"><div id="dishaa">OWNER IMPACT</div></div>
+<div id="entry">
+	<div id="dishaa_desc"> I worry about the future health of my dog </div>
+	<div id="cushqol_answer"><label for="worry_none"><input type="radio" name="worry" value="0" id="worry_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="worry_mild"><input type="radio" name="worry" value="1" id="worry_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="worry_moderate"><input type="radio" name="worry" value="2" id="worry_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="worry_severe"><input type="radio" name="worry" value="3" id="worry_severe" />Always</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> Mine and my dog’s daily routine is disrupted </div>
+	<div id="cushqol_answer"><label for="routine_none"><input type="radio" name="routine" value="0" id="routine_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="routine_mild"><input type="radio" name="routine" value="1" id="routine_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="routine_moderate"><input type="radio" name="routine" value="2" id="routine_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="routine_severe"><input type="radio" name="routine" value="3" id="routine_severe" />Always</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> I feel I am struggling to manage my dog’s health </div>
+	<div id="cushqol_answer"><label for="struggle_none"><input type="radio" name="struggle" value="0" id="struggle_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="struggle_mild"><input type="radio" name="struggle" value="1" id="struggle_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="struggle_moderate"><input type="radio" name="struggle" value="2" id="struggle_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="struggle_severe"><input type="radio" name="struggle" value="3" id="struggle_severe" />Always</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> I feel the bond between me and my dog is lacking </div>
+	<div id="cushqol_answer"><label for="bond_none"><input type="radio" name="bond" value="0" id="bond_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="bond_mild"><input type="radio" name="bond" value="1" id="bond_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="bond_moderate"><input type="radio" name="bond" value="2" id="bond_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="bond_severe"><input type="radio" name="bond" value="3" id="bond_severe" />Always</label></div>	
+	</div>
+<div id="entry">
+	<div id="dishaa_desc"> I feel my dog’s appearance attracts negative comments </div>
+	<div id="cushqol_answer"><label for="comments_none"><input type="radio" name="comments" value="0" id="comments_none" checked="checked" />Never</label></div>
+	<div id="cushqol_answer"><label for="comments_mild"><input type="radio" name="comments" value="1" id="comments_mild" />Sometimes</label></div>
+	<div id="cushqol_answer"><label for="comments_moderate"><input type="radio" name="comments" value="2" id="comments_moderate" />Often</label></div>	
+	<div id="cushqol_answer"><label for="comments_severe"><input type="radio" name="comments" value="3" id="comments_severe" />Always</label></div>		
+	</div>
+
+
+<div id="entry"><div id="question"><button type="submit" value="Submit">Submit</button></div>
+	</div>
+</div>
+
+
+<div id="results">
+<div id="entry">
+	<div id="index">CushQOL Score: <span id="cushqol_score">__</span></div>
+</div>
+</div>
+<script>
+
+document.getElementById("form6").onsubmit=function() {
+        thirsty = parseInt(document.querySelector('input[name = "thirsty"]:checked').value);
+	urinates = parseInt(document.querySelector('input[name = "urinates"]:checked').value);
+	hungry = parseInt(document.querySelector('input[name = "hungry"]:checked').value);
+	pants = parseInt(document.querySelector('input[name = "pants"]:checked').value);
+	depressed = parseInt(document.querySelector('input[name = "depressed"]:checked').value);
+	energy = parseInt(document.querySelector('input[name = "energy"]:checked').value);
+	interact = parseInt(document.querySelector('input[name = "interact"]:checked').value);
+	play = parseInt(document.querySelector('input[name = "play"]:checked').value);
+	confused = parseInt(document.querySelector('input[name = "confused"]:checked').value);
+	weight = parseInt(document.querySelector('input[name = "weight"]:checked').value);
+	coat = parseInt(document.querySelector('input[name = "coat"]:checked').value);
+	skin = parseInt(document.querySelector('input[name = "skin"]:checked').value);
+	condition = parseInt(document.querySelector('input[name = "condition"]:checked').value);
+	walk = parseInt(document.querySelector('input[name = "walk"]:checked').value);
+	worry = parseInt(document.querySelector('input[name = "worry"]:checked').value);
+	routine = parseInt(document.querySelector('input[name = "routine"]:checked').value);
+	struggle = parseInt(document.querySelector('input[name = "struggle"]:checked').value);
+	bond = parseInt(document.querySelector('input[name = "bond"]:checked').value);
+	comments = parseInt(document.querySelector('input[name = "comments"]:checked').value);
+
+	   cushqol =
+	(thirsty
+	+ urinates
+	+ hungry
+	+ pants
+	+ depressed
+	+ energy
+	+ interact
+	+ play
+	+ confused
+	+ weight
+	+ coat
+	+ skin
+	+ condition
+	+ walk 
+	+ worry
+	+ routine
+	+ struggle
+	+ bond
+	+ comments
+	)/57
+	;
+
+	document.getElementById("cushqol_score").innerHTML = cushqol.toFixed(2);
+
+
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+
+</script>
+
+</div>
+</div>
+</form>
+
+<ul>
+	<li>Scores nearest to 0 indicate the best possible quality-of-life.
+	<li>Scores nearest to 1 indicate the worst possible quality-of-life.
+	<li>Changes in the score can be monitored over time. 
+	<li>-0.10 Greatly improved QoL
+	<li>-0.05 Improved QoL
+	<li>+0.05 Reduced QoL
+	<li>+0.1 Greatly reduced QoL
+
+   
+</ul>
+</body>
+</html>
